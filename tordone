@@ -1,0 +1,4 @@
+#!/bin/sh
+# * TR_TORRENT_NAME
+notify-send "Transmission-daemon" "$TR_TORRENT_NAME has completely downloaded."
+
