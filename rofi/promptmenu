@@ -1,10 +1,10 @@
 #!/bin/bash
 
-rofi_command="rofi -theme themes/menu/promptmenu.rasi"
+rofi_command="rofi -theme ~/.config/rofi/themes/menu/big_sur.rasi -xoffset -802 -yoffset -453"
 
 ### Options ###
-yes_text=""
-no_text=""
+yes_text="Yes"
+no_text="No"
 query="Are you sure?"
 # Parse the args
 if [[ $# -eq 0 ]]; then
@@ -46,7 +46,7 @@ fi
 # Variable passed to rofi
 options="$yes_text\n$no_text"
 
-chosen="$(echo -e "$options" | $rofi_command -p "$query" -dmenu -selected-row 1 -m -1)"
+chosen="$(echo -e "$options" | $rofi_command -p "$query" -dmenu -selected-row 1 -m -1 -theme-str 'listview { lines: 2; }')"
 case $chosen in
     $yes_text)
         eval "$yes_command"
