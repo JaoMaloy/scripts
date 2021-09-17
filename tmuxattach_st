@@ -1,4 +1,10 @@
 #!/bin/sh
 
-tmux attach-session -t st
+STSESSION=$(tmux ls | grep "st:")
+
+if [ -t $STSESSION ]; then
+    tmux new-session -s st
+else
+    tmux attach-session -t st
+fi
 
