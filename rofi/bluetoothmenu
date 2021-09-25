@@ -279,7 +279,7 @@ show_menu() {
 }
 
 # Rofi command to pipe into, can add any options here
-rofi_command="rofi -dmenu -no-fixed-num-lines -xoffset -802 -yoffset -518 -i -theme $HOME/.config/rofi/themes/menu/big_sur.rasi -p"
+rofi_command="rofi -dmenu -i -config ~/.config/rofi/bluetoothmenu/pastel.rasi -p"
 
 case "$1" in
     --status)

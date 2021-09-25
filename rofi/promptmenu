@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rofi_command="rofi -theme ~/.config/rofi/themes/menu/big_sur.rasi -xoffset -802 -yoffset -453"
+rofi_command="rofi -config ~/.config/rofi/promptmenu/pastel.rasi"
 
 ### Options ###
 yes_text="Yes"

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rofi -show drun -no-show-match -show-icons -display-drun "" -xoffset -802 -yoffset -394
+rofi -show drun -config "~/.config/rofi/appsmenu/pastel_config.rasi"
 

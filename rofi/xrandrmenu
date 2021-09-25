@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rofi_command="rofi -xoffset -802 -yoffset -394 -config ~/.config/rofi/config.rasi"
+rofi_command="rofi -config ~/.config/rofi/xrandrmenu/pastel.rasi"
 
 # options to be displyed
 option0="activate all monitors"
