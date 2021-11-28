@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SCRIPTS=/home/jaomaloy/Development/projects/scripts/*
+SCRIPTS=/home/jaomaloy/Development/projects/dotfiles/scripts/*
 for f in $SCRIPTS
 do
     echo "Processing $f"
