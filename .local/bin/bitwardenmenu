@@ -1,0 +1,3 @@
+#!/bin/sh
+
+bwmenu --auto-lock 600 -- -config ~/.config/rofi/bitwardenmenu/pastel.rofi

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Launch topbar and bottombar
+echo "---" | tee -a /tmp/polybar.log
+if [ $1 == "modular" ]
+then
+    polybar -c $HOME/.config/polybar/modular_pastel/config2 topbar >> /tmp/polybar.log 2>&1
+else
+    polybar topbar >> /tmp/polybar.log 2>&1
+fi
+
+echo "Bars launched..."
