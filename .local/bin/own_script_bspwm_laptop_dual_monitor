@@ -3,7 +3,19 @@
 # set up the two monitors for bspwm
 # NOTE This is a simplistic approach because I already know the settings I
 # want to apply.
-my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-A-0')
-if [[ $my_laptop_external_monitor = *connected* ]]; then
-    xrandr --output eDP --primary --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 2560x1440 --rotate normal --right-of eDP
+external_monitor=$(xrandr --query | grep 'HDMI-A-0')
+if [[ $external_monitor = *connected* ]]; then
+    xrandr --output HDMI-A-0 --primary --mode 2560x1440 --rotate normal --output eDP --mode 1920x1080 --rotate normal --right-of HDMI-A-0
+fi
+
+monitors=$(xrandr --listactivemonitors | grep "Monitors" | cut -d" " -f2)
+if [[ $monitors == 1 ]]; then
+    bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 0
+elif [[ $monitors == 2 ]]; then
+    bspc monitor HDMI-A-0 -d 1 2 3 4 5
+    bspc monitor eDP -d 6 7 8 9 0
+else
+    bspc monitor eDP-1 -d 1 2 3
+    bspc monitor DP-1 -d 4 5 6
+    bspc monitor HDMI-1 -d  7 8 9
 fi
